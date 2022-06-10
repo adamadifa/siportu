@@ -5,8 +5,8 @@
                 <figure class="avatar avatar-60 border-0"><img src="{{ asset('assets/img/user1.png') }}" alt=""></figure>
             </div>
             <div class="col pl-0 align-self-center">
-                <h5 class="mb-1">Ammy Jahnson</h5>
-                <p class="text-mute small">Work, London, UK</p>
+                <h5 class="mb-1">{{ Auth::guard('orangtua')->user()->nama_lengkap }}</h5>
+                <p class="text-mute small">{{ Auth::guard('orangtua')->user()->nik }}</p>
             </div>
         </div>
     </div>

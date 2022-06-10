@@ -98,6 +98,37 @@
         </a>
         @endforeach
     </div>
+    <div class="container">
+        <h6 class="subtitle">Presensi Hari Ini {{ date("d F Y",strtotime(date("Y-m-d"))) }}</h6>
+
+        <div class="card shadow border-0 mb-3">
+            <div class="card-body bg-template text-white">
+
+                <table class="table text-white" style="font-size: 12px">
+                    <thead>
+                        <tr>
+                            <th>Nama Siswa</th>
+                            <th>Jam Masuk</th>
+                            <th>Jam Pulang</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($absensi as $d)
+                        @php
+                        $nama = explode(" ",$d->nama_lengkap);
+                        @endphp
+                        <tr>
+                            <td>{{ ucwords(strtolower($nama[0])) }}</td>
+                            <td><b>{{ $d->time_in }}</b></td>
+                            <td><b>{{ $d->time_out }}</b></td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
 </div>
 @include('layouts.footer_home');
 @endsection
