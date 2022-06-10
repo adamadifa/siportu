@@ -44,7 +44,8 @@ class AuthController extends Controller
             'nik' => $nik,
             'nama_lengkap' => $nama_lengkap,
             'no_hp' => $no_hp,
-            'password' => $password
+            'password' => $password,
+            'level' => 'orangtua'
         ];
 
         $simpan = DB::table('user_orangtua')->insert($data);

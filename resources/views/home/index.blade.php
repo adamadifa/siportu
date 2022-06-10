@@ -26,11 +26,11 @@
             <div class="card-body border-bottom">
                 <div class="row">
                     <div class="col">
-                        <h3 class="mb-0 font-weight-normal">0</h3>
+                        <h3 class="mb-0 font-weight-normal">{{ rupiah($saldo->totalsaldo) }}</h3>
                         <p class="text-mute">Saldo Tabungan</p>
                     </div>
                     <div class="col-auto">
-                        <button class="btn btn-default btn-rounded-54 shadow" data-toggle="modal" data-target="#addmoney"><i class="material-icons">add</i></button>
+                        <a class="btn btn-default btn-rounded-54 shadow" href="/tabungan/{{ Crypt::encrypt($nik) }}/list"><i class="material-icons">dehaze</i></a>
                     </div>
                 </div>
             </div>

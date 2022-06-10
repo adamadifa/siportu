@@ -57,4 +57,9 @@ Route::middleware(['auth:orangtua', 'ceklevel:orangtua'])->group(function () {
     Route::post('/tagihan/getsppta', [TagihanController::class, 'getsppta']);
     Route::post('/tagihan/getspptaasrama', [TagihanController::class, 'getspptaasrama']);
     Route::post('/tagihan/getdetailtransaksi', [TagihanController::class, 'getdetailtransaksi']);
+
+    //Tabungan
+    Route::get('/tabungan/{nik}/list', [TabunganController::class, 'list']);
+    Route::get('/tabungan/{id_siswa}/detail', [TabunganController::class, 'detail']);
+    Route::get('/tabungan/{kode_tabungan}/{id_siswa}/histori', [TabunganController::class, 'histori']);
 });
