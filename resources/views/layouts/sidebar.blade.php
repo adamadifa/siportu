@@ -16,10 +16,10 @@
                 <a href="/home" class="list-group-item list-group-item-action active"><i class="material-icons icons-raised">home</i>Home</a>
                 <form action="/postlogout" method="POST">
                     @csrf
-                    <button type="submit" class="list-group-item list-group-item-action"><i class="material-icons icons-raised bg-danger">power_settings_new</i>Logout
+                    <button type="submit" class="list-group-item list-group-item-action"><i class="material-icons icons-raised bg-danger">power_settings_new</i>
                         Logout</button>
                 </form>
-                <a href="login.html" class="list-group-item list-group-item-action">
+
             </div>
         </div>
     </div>
