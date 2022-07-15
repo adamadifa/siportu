@@ -14,7 +14,12 @@
         <div class="col">
             <div class="list-group main-menu">
                 <a href="/home" class="list-group-item list-group-item-action active"><i class="material-icons icons-raised">home</i>Home</a>
-                <a href="login.html" class="list-group-item list-group-item-action"><i class="material-icons icons-raised bg-danger">power_settings_new</i>Logout</a>
+                <form action="/postlogout" method="POST">
+                    @csrf
+                    <button type="submit" class="list-group-item list-group-item-action"><i class="material-icons icons-raised bg-danger">power_settings_new</i>Logout
+                        Logout</button>
+                </form>
+                <a href="login.html" class="list-group-item list-group-item-action">
             </div>
         </div>
     </div>

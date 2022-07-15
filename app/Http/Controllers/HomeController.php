@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $nik = Auth::guard('orangtua')->user()->nik;
-
+        $hariini = date("Y-m-d");
 
 
         $saldo = DB::table('koperasi_tabungan')
@@ -22,7 +22,10 @@ class HomeController extends Controller
         $siswa = DB::table('siswa')->where('nik_ayah', $nik)->orWhere('nik_ibu', $nik)->get();
         $absensi = DB::table('presensi_siswa')
             ->join('siswa', 'presensi_siswa.id_siswa', '=', 'siswa.id_siswa')
-            ->where('nik_ayah', $nik)->orWhere('nik_ibu', $nik)
+            ->where('nik_ayah', $nik)
+            ->where('presence_date', $hariini)
+            ->orWhere('nik_ibu', $nik)
+            ->where('presence_date', $hariini)
             ->get();
         return view('home.index', compact('siswa', 'saldo', 'nik', 'absensi'));
     }
