@@ -14,13 +14,27 @@
         </div>
     </div>
     <!-- header ends -->
+
     <form class="form-signin mt-3" method="POST" action="/postlogin" id="frmRegister">
 
         @csrf
+
+
         <div class="row no-gutters login-row">
             <div class="col align-self-center px-3 text-center">
                 <br>
                 <img src="{{ asset('assets/img/logopesantren.png') }}" alt="logo" class="logo-small mb-4">
+                @if ($message = Session::get('warning'))
+                <div class="form-group">
+
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Oops</h4>
+                        <p class="mb-0">
+                            {{$message}}
+                        </p>
+                    </div>
+                </div>
+                @endif
 
                 <div class="form-group">
                     <input type="hidden" id="ceknik">

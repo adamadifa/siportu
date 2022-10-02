@@ -14,6 +14,8 @@ class AuthController extends Controller
     {
         if (Auth::guard('orangtua')->attempt(['nik' => $request->nik, 'password' => $request->password])) {
             return redirect('/home');
+        } else {
+            return redirect('/login')->with(['warning' => 'Username / Password Salah']);
         }
     }
 

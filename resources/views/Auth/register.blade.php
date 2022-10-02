@@ -30,7 +30,7 @@
                     <input type="text" id="nama_lengkap" name="nama_lengkap" class="form-control form-control-lg text-center" placeholder="Nama Lengkap">
                 </div>
                 <div class="form-group">
-                    <input type="text" id="no_hp" name="no_hp" class="form-control form-control-lg text-center" placeholder="No. HP">
+                    <input type="number" id="no_hp" name="no_hp" class="form-control form-control-lg text-center" placeholder="No. HP">
                 </div>
                 <div class="form-group">
                     <input type="password" id="password" class="form-control form-control-lg text-center" name="password" placeholder="Password">
