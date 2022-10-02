@@ -12,8 +12,21 @@ class AuthController extends Controller
 {
     public function postlogin(Request $request)
     {
-        if (Auth::guard('orangtua')->attempt(['nik' => $request->nik, 'password' => $request->password])) {
-            return redirect('/home');
+        // if (Auth::guard('orangtua')->attempt(['nik' => $request->nik, 'password' => $request->password])) {
+        //     return redirect('/home');
+        // } else {
+        //     return redirect('/login')->with(['warning' => 'Username / Password Salah']);
+        // }
+
+        $credentials = $request->validate([
+            'nik' => 'required',
+            'password' => 'required'
+        ]);
+        //dd(Auth::attempt(['username' => $request->username, 'password' => $request->password]));
+        if (Auth::guard('orangtua')->attempt($credentials)) {
+            $request->session()->regenerate();
+            //dd(Auth::user()->kode_cabang);
+            return redirect()->intended('/home');
         } else {
             return redirect('/login')->with(['warning' => 'Username / Password Salah']);
         }

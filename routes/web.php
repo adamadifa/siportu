@@ -33,24 +33,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('introduction.index');
+
+Route::middleware(['guest:orangtua'])->group(function () {
+    Route::get('/', function () {
+        return view('introduction.index');
+    });
+    Route::get('/login', function () {
+        return view('Auth.login');
+    })->name('login');
+
+    Route::get('/register', [AuthController::class, 'register']);
+    Route::post('/storeregister', [AuthController::class, 'storeregister']);
+    Route::post('/ceknik', [AuthController::class, 'ceknik']);
+
+
+    Route::post('/postlogin', [AuthController::class, 'postlogin']);
 });
 
-Route::get('/login', function () {
-    return view('Auth.login');
-})->name('login');
 
-
-Route::get('/register', [AuthController::class, 'register']);
-Route::post('/storeregister', [AuthController::class, 'storeregister']);
-Route::post('/ceknik', [AuthController::class, 'ceknik']);
-
-
-Route::post('/postlogin', [AuthController::class, 'postlogin']);
-Route::post('/postlogout', [AuthController::class, 'postlogout']);
 
 Route::middleware(['auth:orangtua', 'ceklevel:orangtua'])->group(function () {
+    Route::post('/postlogout', [AuthController::class, 'postlogout']);
     Route::get('/home', [HomeController::class, 'index']);
     Route::get('/tagihan/{id_siswa}/list', [TagihanController::class, 'list']);
     Route::get('/tagihan/{no_pendaftaran}/show', [TagihanController::class, 'show']);
