@@ -107,7 +107,7 @@
                 <table class="table text-white" style="font-size: 12px">
                     <thead>
                         <tr>
-                            <th>Nama Siswa</th>
+                            <th>Nama Siswa {{ date("Y-m-d H:i:s") }}</th>
                             <th>Jam Masuk</th>
                             <th>Jam Pulang</th>
                         </tr>
