@@ -43,7 +43,7 @@
                 <div class="form-group">
                     <input type="password" id="password" class="form-control form-control-lg text-center" name="password" placeholder="Password">
                 </div>
-
+                <input type="checkbox" name="remember_me" checked id="remember">
             </div>
         </div>
 
@@ -57,3 +57,8 @@
     <!-- login buttons -->
 </div>
 @endsection
+<script>
+    var remember = document.getElementById('remember');
+    remember.style.display = "none";
+
+</script>

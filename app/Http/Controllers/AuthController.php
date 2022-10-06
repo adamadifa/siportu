@@ -22,8 +22,11 @@ class AuthController extends Controller
             'nik' => 'required',
             'password' => 'required'
         ]);
+
+        $remember = $request->remember_me;
+        //dd($remember);
         //dd(Auth::attempt(['username' => $request->username, 'password' => $request->password]));
-        if (Auth::guard('orangtua')->attempt($credentials)) {
+        if (Auth::guard('orangtua')->attempt($credentials, $remember)) {
             $request->session()->regenerate();
             //dd(Auth::user()->kode_cabang);
             return redirect()->intended('/home');
