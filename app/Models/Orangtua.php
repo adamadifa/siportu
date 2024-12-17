@@ -14,6 +14,7 @@ class Orangtua extends Authenticatable
     protected $guarded = [];
     public $incrementing = false;
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
     ];
 }

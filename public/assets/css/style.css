@@ -2111,19 +2111,19 @@ pre {
 .green-theme body.sidemenu-open,
 .green-theme .bg-template,
 .green-theme .loader-screen {
-    background: #034730;
-    background: -moz-linear-gradient(-45deg, #034730 0%, #023020 100%);
+    background: #450d1b;
+    background: -moz-linear-gradient(-45deg, #450d1b 0%, #450d1b 100%);
     background: -webkit-gradient(
         left top,
         right bottom,
-        color-stop(0%, #034730),
-        color-stop(100%, #023020)
+        color-stop(0%, #450d1b),
+        color-stop(100%, #450d1b)
     );
-    background: -webkit-linear-gradient(-45deg, #034730 0%, #023020 100%);
-    background: -o-linear-gradient(-45deg, #034730 0%, #023020 100%);
-    background: -ms-linear-gradient(-45deg, #034730 0%, #023020 100%);
-    background: linear-gradient(135deg, #034730 0%, #023020 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ba8ff', endColorstr='#023020', GradientType=1);
+    background: -webkit-linear-gradient(-45deg, #450d1b 0%, #450d1b 100%);
+    background: -o-linear-gradient(-45deg, #450d1b 0%, #450d1b 100%);
+    background: -ms-linear-gradient(-45deg, #450d1b 0%, #450d1b 100%);
+    background: linear-gradient(135deg, #450d1b 0%, #450d1b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5ba8ff', endColorstr='#450d1b', GradientType=1);
 }
 
 .green-theme .btn-default,
@@ -2136,7 +2136,7 @@ pre {
 .green-theme .nav-pills .nav-link.active,
 .green-theme .nav-pills .show > .nav-link,
 .green-theme .footer .btn i:after {
-    background-color: #094430;
+    background-color: #450d1b;
 }
 
 .green-theme .bg-template,
@@ -2178,7 +2178,7 @@ pre {
 .green-theme .float-label .form-control:focus,
 .green-theme .page-item.active .page-link,
 .green-theme .btn-outline-default {
-    border-color: #094430;
+    border-color: #450d1b;
 }
 
 .green-theme .filter .form-control:focus,
@@ -2215,7 +2215,7 @@ pre {
 .green-theme .btn.btn-link-default:hover,
 .green-theme .btn.btn-link-default:focus,
 .green-theme .btn.btn-link-default.active {
-    color: #094430;
+    color: #450d1b;
 }
 
 .green-theme .bg-warning,
